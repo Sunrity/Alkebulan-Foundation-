@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative h-[150vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-10 via-white to-slate-100 dark:from-slate-50 dark:via-slate-900 dark:to-slate-950 ">
+    <section className="relative h-[100vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-10 via-white to-slate-100 dark:from-slate-50 dark:via-slate-900 dark:to-slate-950 ">
       
       {/* Background Image */}
       <div className="absolute inset-0">

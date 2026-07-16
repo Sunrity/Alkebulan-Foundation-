@@ -114,7 +114,7 @@ const Navbar: React.FC = () => {
 
           {/* Join Button */}
           <a
-            href="https://chat.whatsapp.com/JL6fsvqSshrAGbByW2K80Z"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfPOZp4q5IzLrX5dE9USQ6W0NaxiUG1lOwYWCwpsf5FDX8QXg/viewform?usp=dialog"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition"
@@ -203,7 +203,7 @@ const Navbar: React.FC = () => {
 
               {/* Mobile Join Button */}
               <a
-                href="https://chat.whatsapp.com/JL6fsvqSshrAGbByW2K80Z"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfPOZp4q5IzLrX5dE9USQ6W0NaxiUG1lOwYWCwpsf5FDX8QXg/viewform?usp=dialog"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-3 px-4 py-3 bg-blue-700 text-white rounded-lg text-center hover:bg-blue-800"

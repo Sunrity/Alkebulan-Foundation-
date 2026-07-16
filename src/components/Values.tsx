@@ -150,7 +150,7 @@ const Mentoring: React.FC = () => {
             Join us in our online mentoring today and be equipped to lead with confidence, faith, and purpose.
           </p>
           <a
-            href="https://chat.whatsapp.com/JL6fsvqSshrAGbByW2K80Z"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfPOZp4q5IzLrX5dE9USQ6W0NaxiUG1lOwYWCwpsf5FDX8QXg/viewform?usp=dialog"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-blue-700 hover:bg-blue-100 text-base sm:text-lg px-6 sm:px-8 py-2 sm:py-3 rounded-xl font-semibold inline-block"

@@ -80,13 +80,13 @@ const ContactDonatePage = () => {
 
             <div className="flex items-center gap-3">
               <Phone className="text-blue-600" />
-              <p>+234 913 096 1875 / +234 813 902 3970</p>
+              <p> +234 913 096 1875 </p>
             </div>
 
-            <div className="flex items-center gap-3">
+            {/* <div className="flex items-center gap-3">
               <User className="text-blue-600" />
               <p>Founder: 0814 700 8005</p>
-            </div>
+            </div> */}
 
             <div className="flex items-center gap-3">
               <Mail className="text-blue-600" />
@@ -112,9 +112,9 @@ const ContactDonatePage = () => {
             </p>
 
             <div className="space-y-2 text-gray-700">
-              <p><strong>Bank:</strong> Zenith Bank</p>
-              <p><strong>Account:</strong> Alkebulan Foundation</p>
-              <p><strong>Account No:</strong> 0000000000</p>
+              <p><strong>Bank: Moniepoint </strong></p>
+              <p><strong>Account: Alkebulan Foundation For Skill Development </strong> </p>
+              <p><strong>Account No: 510 5290 759 </strong></p>
             </div>
           </div>
 

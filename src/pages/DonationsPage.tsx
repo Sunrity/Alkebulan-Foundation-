@@ -22,7 +22,7 @@ const DonationsPage = () => {
                     <div className="bg-white p-6 rounded-xl shadow text-center">
                         <h3 className="text-gray-500">Total Raised</h3>
                         <p className="text-2xl font-bold text-green-600">
-                            ₦10,000
+                            ₦0.00
                         </p>
                     </div>
 
@@ -36,7 +36,7 @@ const DonationsPage = () => {
                     <div className="bg-white p-6 rounded-xl shadow text-center">
                         <h3 className="text-gray-500">Current Balance</h3>
                         <p className="text-2xl font-bold text-[#0B132B]">
-                            ₦10,000
+                            ₦0.00
                         </p>
                     </div>
 
@@ -44,29 +44,34 @@ const DonationsPage = () => {
 
                 {/* Donation Section */}
                 <div className="bg-white p-6 rounded-xl shadow mb-10">
-
+                <div className="flex justify-center">
                     <h2 className="text-xl font-semibold mb-3">
                         Make a Donation
                     </h2>
+                </div>
 
                     <p className="text-gray-600 mb-6">
-                        Your support is more than a donation — it is a lifeline that helps us empower communities, transform lives, and create lasting impact.
+                        Every great change begins with people who choose to make a difference.
+
+                        At Alkebulan Foundation for Skill Development, we are committed to equipping young people with the knowledge, skills, and opportunities they need to build better futures. Every training we organize, every life we impact, and every community we reach is made possible by people who believe in this mission.
+
+                        Your support is not just a donation—it is an investment in someone's future. It helps us provide skill development programs, mentorship, educational resources, and life-changing opportunities to individuals who may never have had the chance otherwise.
+
+                        No contribution is too small. Together, we can empower more young people, transform more lives, and build stronger communities across Africa.
+
+                        Support Our Mission
+                         Give today. Empower a life. Create lasting impact.
                     </p>
 
-                    {/* Bank Details */}
-                    <div className="space-y-2 text-gray-700 mb-6">
-                        <p><strong>Bank Name:</strong> Zenith Bank</p>
-                        <p><strong>Account Name:</strong> Alkebulan Foundation</p>
-                        <p><strong>Account Number:</strong> 0000000000</p>
-                    </div>
-
                     {/* Donate Button */}
-                    <Link
-                        to="/contact"
-                        className="inline-block bg-[#0B132B] text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
-                    >
-                        Donate Now
-                    </Link>
+                   <div className="flex justify-center">
+                        <Link
+                            to="/contact"
+                            className="inline-block bg-[#0B132B] text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+                        >
+                            Donate Now
+                        </Link>
+                    </div>
 
                 </div>
 

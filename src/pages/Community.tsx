@@ -64,13 +64,13 @@ const Community = () => {
           Community Guide
         </h1>
         <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-          Welcome to Next Generation Builders — where purpose meets growth and leaders are built.
+          Welcome to Alkebulan Foundation  — where purpose meets growth and leaders are built.
         </p>
       </motion.div>
 
       {/* WELCOME */}
       <Section title="Welcome" icon={<Users />}>
-        Next Generation Builders is a movement of young individuals committed to building a better future.
+        Alkebulan Foundation is a movement of young individuals committed to building a better future.
         This is where purpose is discovered, potential is developed, and greatness is built.
       </Section>
 

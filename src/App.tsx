@@ -21,10 +21,11 @@ const Skill = lazy(() => import("./pages/Skill"));
 const Blog = lazy(() => import("./pages/Blog"));
 const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
 const NotFound = lazy(() => import("./pages/NotFound"));
-const Partners = lazy(() => import("./pages/partners"));
+
+
 
 // ✅ IMPORTANT: Donations page (NOT lazy, to avoid confusion)
-import DonationsPage from "./pages/DonationsPage";
+// import DonationsPage from "./pages/DonationsPage";
 
 // React Query
 const queryClient = new QueryClient();
@@ -56,10 +57,10 @@ const App: React.FC = () => {
               <Route path="/skills" element={<Skill />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/admindashboard" element={<AdminDashboard />} />
-              <Route path="/partners" element={<Partners />} />
+              
 
               {/* ✅ DONATIONS ROUTE FIXED */}
-              <Route path="/donations" element={<DonationsPage />} />
+              {/* <Route path="/donations" element={<DonationsPage />} /> */}
 
               {/* 404 fallback */}
               <Route path="*" element={<NotFound />} />

@@ -1,124 +1,274 @@
 "use client";
 
-import { Mail, Phone, Facebook, Instagram, Linkedin } from "lucide-react";
+import {
+    Mail,
+    Phone,
+    Facebook,
+    Instagram,
+    Linkedin,
+    ArrowUpRight,
+} from "lucide-react";
 
 const Footer = () => {
     const sponsors = [
-        { name: "Rescaf", logo: "/partners/rescaf.jpg", url: "https://rescaf.io/" },
-        { name: "Scitylana", logo: "/partners/Scitylana.jpg", url: "https://www.scitylana.co.uk/" },
-        { name: "8cousins", logo: "/partners/8c.png", url: "https://8-cousins-digital-home.vercel.app/" },
+        {
+            name: "Rescaf",
+            logo: "/partners/rescaf.jpg",
+            url: "https://rescaf.io/",
+        },
+        {
+            name: "Scitylana",
+            logo: "/partners/Scitylana.jpeg",
+            url: "https://www.scitylana.co.uk/",
+        },
+        {
+            name: "8cousins",
+            logo: "/partners/8c.png",
+            url: "https://8-cousins-digital-home.vercel.app/",
+        },
     ];
 
     return (
-        <footer className="bg-[#0B132B] text-gray-300 py-14 border-t border-white/10">
-            <div className="max-w-7xl mx-auto px-6 md:px-10">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-20">
+        <footer className="bg-[#0B132B] text-white">
 
-                    {/* Sponsors Section */}
-                    <section className="col-span-1">
-                        <h2 className="text-xl font-bold text-white mb-2">Our Sponsors</h2>
-                        <p className="text-gray-400 mb-4">Proudly supported by:</p>
+          
+                {/* =========================
+                    PARTNERS SECTION
+                ========================== */}
 
-                        <div className="grid grid-cols-2 gap-4">
+                <div className="border-b border-white/10">
+                    <div className="max-w-7xl mx-auto px-6 md:px-10 py-14">
+
+                        <div className="text-center mb-10">
+                            <p className="text-xs md:text-sm uppercase tracking-[0.25em] text-blue-300 font-semibold">
+                                Our Partners
+                            </p>
+
+                            <h3 className="mt-3 text-2xl md:text-3xl font-bold text-white">
+                                Building Impact Together
+                            </h3>
+
+                            <p className="mt-3 max-w-2xl mx-auto text-sm md:text-base text-white leading-7">
+                                We are grateful to the organisations and partners
+                                who believe in our vision and support our work
+                                towards empowering the next generation.
+                            </p>
+                        </div>
+
+                        {/* Partner Logos */}
+                        <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16 lg:gap-20 max-w-5xl mx-auto">
+
                             {sponsors.map((sponsor) => (
                                 <a
                                     key={sponsor.name}
                                     href={sponsor.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="block relative z-10"
+                                    aria-label={`Visit ${sponsor.name}`}
+                                    className="group flex items-center justify-center transition-all duration-300 hover:-translate-y-2"
                                 >
-                                    <div className="hover:bg-white/20 transition p-4 rounded-lg flex items-center justify-center cursor-pointer transform hover:scale-105 duration-300">
-                                        {sponsor.logo ? (
-                                            <img
-                                                src={sponsor.logo}
-                                                alt={sponsor.name}
-                                                className="h-12 object-contain"
-                                            />
-                                        ) : (
-                                            <span className="text-white font-semibold">
-                                                {sponsor.name}
-                                            </span>
-                                        )}
-                                    </div>
+                                    <img
+                                        src={sponsor.logo}
+                                        alt={`${sponsor.name} logo`}
+                                        className="w-40 h-24 md:w-52 md:h-32 lg:w-60 lg:h-36 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+                                    />
                                 </a>
                             ))}
-                        </div>
-                    </section>
 
-                    {/* Brand Info */}
+                        </div>
+
+                        <p className="text-center text-xs text-white mt-8">
+                            Interested in partnering with us?{" "}
+                            <a
+                                href="/contact"
+                                className="text-blue-300 hover:text-blue-200 transition-colors"
+                            >
+                                Let&apos;s work together.
+                            </a>
+                        </p>
+
+                    </div>
+                </div>
+
+
+
+
+            {/* =========================
+                MAIN FOOTER
+            ========================== */}
+            <div className="max-w-7xl mx-auto px-6 md:px-10">
+
+                <div className="py-16 md:py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+
+                    {/* Brand */}
                     <div>
-                        <h3 className="text-2xl font-semibold text-white mb-3">
-                            <span className="text-blue-400">Alkebulan </span> Foundation
-                        </h3>
-                        <p className="text-gray-400 leading-relaxed max-w-md">
-                            We empower young minds to grow into impactful leaders by blending mentorship,
-                            innovation, and purpose-driven education.
+                        <div className="mb-6">
+                            <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
+                                Alkebulan{" "}
+                                <span className="text-blue-400">
+                                    Foundation
+                                </span>
+                            </h2>
+
+                            <div className="mt-3 w-12 h-1 bg-blue-400 rounded-full" />
+                        </div>
+
+                        <p className="text-white leading-7 text-sm md:text-base max-w-sm">
+                            We empower young minds to grow into impactful
+                            leaders through mentorship, innovation, digital
+                            skills, and purpose-driven education.
+                        </p>
+
+                        <p className="mt-6 text-sm font-medium text-white italic">
+                            From within we rise. Together, we build nations.
                         </p>
                     </div>
 
-                    {/* Contact Section */}
+                    {/* Quick Contact */}
                     <div>
-                        <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
-                        <ul className="space-y-3">
-                            <li className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-blue-50 transition cursor-pointer">
-                                <Phone size={18} className="text-blue-400" />
-                                <a href="tel:+2349130961875" className="text-blue-600 font-medium">
-                                    +234-913-096-1875
-                                </a>
-                            </li>
+                        <h3 className="text-lg font-bold mb-6">
+                            Contact Us
+                        </h3>
 
-                            {/* <li className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-blue-50 transition cursor-pointer">
-                                <Phone size={18} className="text-blue-400" />
-                                <a href="tel:+2348139023970" className="text-blue-600 font-medium">
-                                    +234-813-902-3970
-                                </a>
-                            </li> */}
+                        <div className="space-y-5">
 
-                            <li>
-                                <a
-                                    href="mailto:alkebulanfoundation08@gmail.com"
-                                    className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-blue-50 transition text-blue-600 font-medium"
-                                >
-                                    <Mail size={18} className="text-blue-400" />
-                                    alkebulanfoundation08@gmail.com
-                                </a>
-                            </li>
-                        </ul>
+                            <a
+                                href="tel:+2349130961875"
+                                className="group flex items-start gap-4"
+                            >
+                                <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center shrink-0 group-hover:bg-blue-500 transition-all duration-300">
+                                    <Phone size={18} />
+                                </div>
+
+                                <div>
+                                    <p className="text-xs uppercase tracking-wider text-white/70 mb-1">
+                                        Phone
+                                    </p>
+
+                                    <p className="text-sm text-white">
+                                        +234-913-096-1875
+                                    </p>
+                                </div>
+                            </a>
+
+                            <a
+                                href="mailto:alkebulanfoundation08@gmail.com"
+                                className="group flex items-start gap-4"
+                            >
+                                <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center shrink-0 group-hover:bg-blue-500 transition-all duration-300">
+                                    <Mail size={18} />
+                                </div>
+
+                                <div className="min-w-0">
+                                    <p className="text-xs uppercase tracking-wider text-white/70 mb-1">
+                                        Email
+                                    </p>
+
+                                    <p className="text-sm text-white group-hover:text-blue-300 transition break-all">
+                                        alkebulanfoundation08@gmail.com
+                                    </p>
+                                </div>
+                            </a>
+
+                        </div>
                     </div>
 
-                    {/* Social Links */}
+                    {/* Explore */}
                     <div>
-                        <h4 className="text-lg font-semibold text-white mb-4">Follow Us</h4>
-                        <div className="flex items-center gap-5">
+                        <h3 className="text-lg font-bold mb-6">
+                            Explore
+                        </h3>
+
+                        <div className="space-y-3">
+                            <a
+                                href="/"
+                                className="block text-sm text-white hover:text-white transition-colors"
+                            >
+                                Home
+                            </a>
+
+                            <a
+                                href="/skills"
+                                className="block text-sm text-white hover:text-white transition-colors"
+                            >
+                                Our Programmes
+                            </a>
+
+                            <a
+                                href="/about"
+                                className="block text-sm text-white hover:text-white transition-colors"
+                            >
+                                About Us
+                            </a>
+
+                            <a
+                                href="/contact"
+                                className="block text-sm text-white hover:text-white transition-colors"
+                            >
+                                Contact Us
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Social */}
+                    <div>
+                        <h3 className="text-lg font-bold mb-6">
+                            Stay Connected
+                        </h3>
+
+                        <p className="text-sm text-white leading-6 mb-6">
+                            Follow Alkebulan Foundation for updates,
+                            programmes, opportunities, and stories of impact.
+                        </p>
+
+                        <div className="flex items-center gap-3">
+
                             <a
                                 href="https://web.facebook.com/profile.php?id=61586575755232"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="hover:text-blue-400 transition"
+                                aria-label="Facebook"
+                                className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center text-white hover:bg-blue-500 transition-all duration-300"
                             >
-                                <Facebook size={20} />
+                                <Facebook size={21} />
                             </a>
 
                             <a
                                 href="https://www.instagram.com/nextgenerationbuilders130925/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="hover:text-blue-400 transition"
+                                aria-label="Instagram"
+                                className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center text-white hover:bg-blue-500 transition-all duration-300"
                             >
-                                <Instagram size={20} />
+                                <Instagram size={21} />
                             </a>
 
-                            <a href="#" className="hover:text-blue-400 transition">
-                                <Linkedin size={20} />
+                            <a
+                                href="#"
+                                aria-label="LinkedIn"
+                                className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center text-white hover:bg-blue-500 transition-all duration-300"
+                            >
+                                <Linkedin size={21} />
                             </a>
+
                         </div>
                     </div>
                 </div>
 
-                {/* Bottom */}
-                <div className="border-t border-white/10 mt-12 pt-6 text-center text-sm text-gray-500">
-                    © {new Date().getFullYear()} Alkebulan Foundation. All rights reserved.
+                {/* =========================
+                    BOTTOM FOOTER
+                ========================== */}
+                <div className="border-t border-white py-6 flex flex-col md:flex-row items-center justify-between gap-3">
+
+                    <p className="text-xs md:text-sm text-white text-center md:text-left">
+                        © {new Date().getFullYear()} Alkebulan Foundation.
+                        All rights reserved.
+                    </p>
+
+                    <p className="text-xs md:text-sm text-white">
+                        Empowering the next generation.
+                    </p>
+
                 </div>
             </div>
         </footer>
@@ -126,3 +276,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

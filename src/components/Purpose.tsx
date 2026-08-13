@@ -98,12 +98,6 @@ const Purpose = () => {
                         </motion.div>
                     ))}
                 </div>
-
-                <div className="w-full flex items-end justify-end mt-3">
-                    <button className="text-white flex items-center gap-2 cursor-pointe rounded-full p-2 r hover:bg-gray-500 transition">
-                        Read More <ArrowRight size={14} />
-                    </button>
-                </div>
             </div>
         </section>
     );

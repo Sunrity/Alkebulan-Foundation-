@@ -1,16 +1,14 @@
 import Hero from "@/components/Hero";
-import About from "@/components/AboutSection";
 import Values from "@/components/Values";
-import Purpose from "@/components/Purpose";
 import Mentoring from "@/components/Mentoring";
+import Visionary from "@/components/VisionarySection"
 
 const Index = () => {
     return (
         <div>
             <Hero />
-            <About />
-            <Purpose />
             <Values />
+            <Visionary />
             <Mentoring />
         </div>
     );

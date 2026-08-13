@@ -48,13 +48,6 @@ const About: React.FC = () => {
               To raise visionary leaders who create value, build sustainable companies, and transform nations through integrity, innovation, and collaboration.
               We are committed to building Africa by bringing people together to shine the light within us—unlocking potential, fostering unity, and driving collective growth across the continent.
             </p>
-
-            <div className="border-t border-white/10 pt-6">
-              <h4 className="text-2xl font-semibold mb-2 text-white">Our Aim</h4>
-              <p className="text-gray-400 leading-relaxed">
-                We’re not just training minds — we’re building world changers. Builders who are confident in purpose, strong in values, and skilled in execution, ready to impact Africa and the world at large.
-              </p>
-            </div>
           </div>
         </motion.div>
       </div>

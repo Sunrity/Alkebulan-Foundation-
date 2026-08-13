@@ -11,7 +11,7 @@ const TeamPage = () => {
   /* ===================== DATA ===================== */
   const mentors = [
     {
-      name: "Michael",
+      name: "Michael Ogu",
       role: "Leadership Mentor",
       location: "Austria, Europe",
       image: "/mentors/Michael.jpg",
@@ -21,7 +21,7 @@ const TeamPage = () => {
       name: "Felix Kpormon",
       role: "Mindset Coach",
       location: "Port Harcourt, Nigeria",
-      image: "/mentors/Felix.jpg",
+      image: "/mentors/felix.jpeg",
       description: "Helping young people develop the mindset required to succeed in life and leadership."
     },
     {

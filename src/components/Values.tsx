@@ -26,12 +26,6 @@ const Mentoring: React.FC = () => {
       duration: "6 weeks",
       format: "Online Coaching",
     },
-    {
-      title: "Faith & Purpose",
-      description: "Discover your divine purpose and align your goals with biblical principles.",
-      duration: "10 weeks",
-      format: "Online + Community",
-    },
   ];
 
   return (
@@ -84,8 +78,7 @@ const Mentoring: React.FC = () => {
               Grow with Purpose and Community
             </h3>
             <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
-              Our mentoring system blends biblical values, practical leadership,
-              and community-based learning — all online, flexible, and transformational.
+              Our mentoring system combines character development, practical leadership, personal growth, and community-based learning to equip young people with the knowledge, confidence, and skills they need to create meaningful impact.
             </p>
 
             <ul className="space-y-2 text-gray-700 text-left sm:text-left max-w-md mx-auto lg:mx-0">
@@ -155,7 +148,7 @@ const Mentoring: React.FC = () => {
             rel="noopener noreferrer"
             className="bg-white text-blue-700 hover:bg-blue-100 text-base sm:text-lg px-6 sm:px-8 py-2 sm:py-3 rounded-xl font-semibold inline-block"
           >
-            Join Us
+            Join Our Community 
           </a>
         </motion.div>
       </div>

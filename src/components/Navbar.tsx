@@ -9,9 +9,8 @@ const navLinks = [
   { name: "Home", href: "/" },
 
   // ✅ FIXED ROUTE (must match App.tsx)
-  { name: "Donations", href: "/donations" },
 
-  { name: "Donate Now", href: "/contact" },
+  { name: "Contact us ", href: "/contact" },
   {
     name: "About",
     dropdown: [
@@ -33,10 +32,6 @@ const navLinks = [
       { name: "Skill", href: "/skills" },
       { name: "Community Guide", href: "/community-guide" },
     ],
-  },
-  {
-    name: "Partners",
-    dropdown: [{ name: "Partners", href: "/partners" }],
   },
 ];
 

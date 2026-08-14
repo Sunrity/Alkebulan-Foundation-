@@ -162,26 +162,7 @@ const VisionarySection = () => {
               {/* =========================
                   FULL BIOGRAPHY
               ========================== */}
-              <div className="mt-10 space-y-6 text-lg leading-8 text-gray-700">
-
-                <p>
-                  Every meaningful movement begins with a vision—a belief that
-                  things can be better and a willingness to take the first step
-                  towards making that belief a reality.
-                </p>
-
-                <p>
-                  Alkebulan Foundation was born from that vision.
-                </p>
-
-                <p>
-                  Felix Aabe Kpormon is the visionary and Founder of Alkebulan
-                  Foundation for Skill Development, an organisation committed to
-                  empowering young Africans, developing leaders, and creating
-                  opportunities for people to discover and maximise their
-                  potential.
-                </p>
-
+              <div className="mt-10 space-y-6 text-lg leading-8 text-black">
                 <p>
                   His journey has been shaped by challenges, learning,
                   self-discovery, and a strong desire to make a difference in

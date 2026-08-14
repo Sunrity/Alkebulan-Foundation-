@@ -56,26 +56,48 @@ const Footer = () => {
                         </div>
 
                         {/* Partner Logos */}
-                        <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16 lg:gap-20 max-w-5xl mx-auto">
+                        {/* Partner Logos */}
+<div className="relative overflow-hidden max-w-5xl mx-auto">
+    {/* Mobile: Moving logos */}
+    <div className="flex md:hidden w-max animate-partner-scroll">
+        {[...sponsors, ...sponsors].map((sponsor, index) => (
+            <a
+                key={`${sponsor.name}-${index}`}
+                href={sponsor.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Visit ${sponsor.name}`}
+                className="flex items-center justify-center shrink-0 mx-6"
+            >
+                <img
+                    src={sponsor.logo}
+                    alt={`${sponsor.name} logo`}
+                    className="w-36 h-24 object-contain opacity-80"
+                />
+            </a>
+        ))}
+    </div>
 
-                            {sponsors.map((sponsor) => (
-                                <a
-                                    key={sponsor.name}
-                                    href={sponsor.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label={`Visit ${sponsor.name}`}
-                                    className="group flex items-center justify-center transition-all duration-300 hover:-translate-y-2"
-                                >
-                                    <img
-                                        src={sponsor.logo}
-                                        alt={`${sponsor.name} logo`}
-                                        className="w-40 h-24 md:w-52 md:h-32 lg:w-60 lg:h-36 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
-                                    />
-                                </a>
-                            ))}
-
-                        </div>
+    {/* Desktop: Normal centered logos */}
+    <div className="hidden md:flex flex-wrap items-center justify-center gap-16 lg:gap-20">
+        {sponsors.map((sponsor) => (
+            <a
+                key={sponsor.name}
+                href={sponsor.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Visit ${sponsor.name}`}
+                className="group flex items-center justify-center transition-all duration-300 hover:-translate-y-2"
+            >
+                <img
+                    src={sponsor.logo}
+                    alt={`${sponsor.name} logo`}
+                    className="w-52 h-32 lg:w-60 lg:h-36 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+                />
+            </a>
+        ))}
+    </div>
+</div>
 
                         <p className="text-center text-xs text-white mt-8">
                             Interested in partnering with us?{" "}

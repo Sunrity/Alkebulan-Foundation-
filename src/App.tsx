@@ -15,7 +15,6 @@ const Team = lazy(() => import("./pages/team"));
 const Qapage = lazy(() => import("./pages/qapage"));
 const Who = lazy(() => import("./pages/Who"));
 const Contact = lazy(() => import("./pages/Contact"));
-const Programs = lazy(() => import("./pages/Programs"));
 const Community = lazy(() => import("./pages/Community"));
 const Skill = lazy(() => import("./pages/Skill"));
 const Blog = lazy(() => import("./pages/Blog"));
@@ -52,15 +51,13 @@ const App: React.FC = () => {
               <Route path="/who" element={<Who />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/qapage" element={<Qapage />} />
-              <Route path="/programs" element={<Programs />} />
               <Route path="/community-guide" element={<Community />} />
               <Route path="/skills" element={<Skill />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/admindashboard" element={<AdminDashboard />} />
               
 
-              {/* ✅ DONATIONS ROUTE FIXED */}
-              {/* <Route path="/donations" element={<DonationsPage />} /> */}
+     
 
               {/* 404 fallback */}
               <Route path="*" element={<NotFound />} />

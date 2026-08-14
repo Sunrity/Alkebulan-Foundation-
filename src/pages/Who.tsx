@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import OurTeam from "@/pages/team";
 import {
     ArrowRight,
     Eye,
@@ -406,6 +407,17 @@ const WhoPage = () => {
                     </div>
                 </div>
             </section>
+            
+             {/* =========================================================
+                OUR TEAM
+            ========================================================= */}
+            <section className="bg-[#F8FAFC]">
+
+                <OurTeam />
+
+            </section>            
+
+
 
 
             {/* =========================================================

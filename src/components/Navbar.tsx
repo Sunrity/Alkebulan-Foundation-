@@ -15,7 +15,6 @@ const navLinks = [
     name: "About",
     dropdown: [
       { name: "Who we are", href: "/who" },
-      { name: "Our Team", href: "/team" },
     ],
   },
   {
@@ -28,7 +27,6 @@ const navLinks = [
   {
     name: "Community",
     dropdown: [
-      { name: "Programs", href: "/programs" },
       { name: "Skill", href: "/skills" },
       { name: "Community Guide", href: "/community-guide" },
     ],

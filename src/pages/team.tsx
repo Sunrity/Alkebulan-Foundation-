@@ -42,8 +42,16 @@ const TeamPage = () => {
       name: "Dr. Princewill Opubo",
       role: "Innovation Mentor",
       location: "Port Harcourt, Nigeria",
-      image: "/mentors/Princewill.jpg",
+      image: "/public/mentors/Princewill.jpg",
       description: "Guiding young minds to think creatively, solve problems, and innovate for the future."
+    },
+    {
+      name: "Mr. Lucky Chukwunalu",
+      role: "Career Mentor",
+      location: "United Arab Emirates",
+      image: "/mentors/Mr. Lucky.jpeg",
+      description:
+      "Guiding young people to make informed career decisions, discover their strengths, and choose a career path that aligns with their purpose and potential.",
     },
   ];
 

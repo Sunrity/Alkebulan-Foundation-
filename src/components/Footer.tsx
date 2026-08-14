@@ -98,11 +98,10 @@ const Footer = () => {
         ))}
     </div>
 </div>
-
                         <p className="text-center text-xs text-white mt-8">
                             Interested in partnering with us?{" "}
                             <a
-                                href="/contact"
+                                href="/Contact"
                                 className="text-blue-300 hover:text-blue-200 transition-colors"
                             >
                                 Let&apos;s work together.

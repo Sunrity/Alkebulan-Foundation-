@@ -42,7 +42,7 @@ const TeamPage = () => {
       name: "Dr. Princewill Opubo",
       role: "Innovation Mentor",
       location: "Port Harcourt, Nigeria",
-      image: "/public/mentors/Princewill.jpg",
+      image: "/mentors/Princewill.jpg",
       description: "Guiding young minds to think creatively, solve problems, and innovate for the future."
     },
     {

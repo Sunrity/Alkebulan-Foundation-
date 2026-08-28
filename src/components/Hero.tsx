@@ -6,6 +6,9 @@ import leadershipImage from "@/assets/kpor.jpeg";
 import financialImage from "@/assets/esther-hero.jpg";
 import personalGrowthImage from "@/assets/umuola.jpeg";
 import purposeImage from "@/assets/NGB-FAMILY.jpeg";
+import moment from "@/assets/moment3.jpeg"
+import heroImage from "@/assets/moment2.jpeg"
+
 
 import {
     ArrowLeft,
@@ -17,7 +20,8 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/esther-hero.jpg";
+
+
 
 type Event = {
     name: string;
@@ -60,9 +64,25 @@ const Hero: React.FC = () => {
             ),
         },
 
+
         {
-            name: "Financial Intelligence",
-            image: financialImage,
+            name: "Purpose & Impact Mentoring",
+            image: moment,
+            description: (
+                <>
+                    <span className="font-bold text-black">
+                        December 2025
+                    </span>{" "}
+                    - Helping young people discover their purpose, gain
+                    clarity, and take intentional steps toward building a
+                    meaningful future.
+                </>
+            ),
+        },
+
+        {
+            name: "Moment from our past event",
+            image: heroImage,
             description: (
                 <>
                     <span className="font-bold text-black">
@@ -438,7 +458,7 @@ const Hero: React.FC = () => {
                             <span className="w-8 h-px bg-blue-600" />
 
                             <span className="text-xs sm:text-sm font-bold tracking-[0.2em] text-blue-600 uppercase">
-                                Our Recent Events
+                                    Moment from our past Events
                             </span>
 
                             <span className="w-8 h-px bg-blue-600" />

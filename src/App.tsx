@@ -4,6 +4,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
+import { LoginPage } from "./pages/Login";
+import RegisterPage from "./pages/RegisterPage";
+import ForgotPasswordPage from "./pages/ForgotPassword";
+import ResetPasswordPage from "./pages/ResetPassword";
 
 import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
@@ -18,13 +22,13 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Community = lazy(() => import("./pages/Community"));
 const Skill = lazy(() => import("./pages/Skill"));
 const Blog = lazy(() => import("./pages/Blog"));
+const CourseSelectionPage = lazy(() =>
+  import("./pages/CourseSelection").then((module) => ({
+    default: module.CourseSelectionPage,
+  }))
+);
 const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
 const NotFound = lazy(() => import("./pages/NotFound"));
-
-
-
-// ✅ IMPORTANT: Donations page (NOT lazy, to avoid confusion)
-// import DonationsPage from "./pages/DonationsPage";
 
 // React Query
 const queryClient = new QueryClient();
@@ -33,7 +37,6 @@ const App: React.FC = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-
         {/* Toasts */}
         <Toaster />
         <Sonner />
@@ -43,9 +46,10 @@ const App: React.FC = () => {
 
           <Navbar />
 
-          <Suspense fallback={<div className="p-10 text-center">Loading...</div>}>
+          <Suspense
+            fallback={<div className="p-10 text-center">Loading...</div>}
+          >
             <Routes>
-
               <Route path="/" element={<Index />} />
               <Route path="/team" element={<Team />} />
               <Route path="/who" element={<Who />} />
@@ -54,20 +58,20 @@ const App: React.FC = () => {
               <Route path="/community-guide" element={<Community />} />
               <Route path="/skills" element={<Skill />} />
               <Route path="/blog" element={<Blog />} />
-              <Route path="/admindashboard" element={<AdminDashboard />} />
-              
-
-     
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/register" element={<RegisterPage />} />
+              <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+              <Route path="/reset-password" element={<ResetPasswordPage />} />
+              <Route path="/courses" element={<CourseSelectionPage />} />
+              <Route path="/admin/dashboard" element={<AdminDashboard />} />
 
               {/* 404 fallback */}
               <Route path="*" element={<NotFound />} />
-
             </Routes>
           </Suspense>
 
           <Footer />
         </BrowserRouter>
-
       </TooltipProvider>
     </QueryClientProvider>
   );

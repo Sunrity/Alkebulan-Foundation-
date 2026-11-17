@@ -1,0 +1,71 @@
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  STUDENT
+  ADMIN
+}
+
+enum Status {
+  PENDING
+  ACTIVE
+  COMPLETED
+  CANCELLED
+}
+
+model User {
+  id                  String               @id @default(uuid())
+  email               String               @unique
+  password            String
+  fullName            String
+  age                 Int?
+  sex                 String?
+  role                String               @default("STUDENT")
+  createdAt           DateTime             @default(now())
+  updatedAt           DateTime             @updatedAt
+  enrollments         Enrollment[]
+  passwordResetTokens PasswordResetToken[]
+}
+
+model PasswordResetToken {
+  id        String   @id @default(uuid())
+  tokenHash String   @unique
+  userId    String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+}
+
+model Course {
+  id          String       @id @default(uuid())
+  title       String
+  description String
+  category    String
+  duration    String
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  enrollments Enrollment[]
+}
+
+model Enrollment {
+  id         String   @id @default(uuid())
+  userId     String
+  courseId   String
+  status     Status   @default(ACTIVE)
+  enrolledAt DateTime @default(now())
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, courseId])
+}
